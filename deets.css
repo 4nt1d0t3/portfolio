@@ -62,7 +62,8 @@ h1 {
     left: 25%;
     top: -20%;
 }
-.email:hover {
+#email:hover {
+    visibility: visible;
 	animation: zoom 500ms forwards;
 	-webkit-text-stroke: 0.3px white;
 }
