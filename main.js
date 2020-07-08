@@ -1,5 +1,5 @@
 setTimeout(function() {
-	document.getElementById('fromTheTop').style.top = '15vh';
+	document.getElementById('fromTheTop').style.top = '6vh';
 }, 300);
 
 const worksIcon = document.querySelector('#works-i');

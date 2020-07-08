@@ -67,6 +67,9 @@ h1 {
 	height: auto;
 	cursor: pointer;
 }
+p {
+	font-family: 'Open Sans', sans-serif;
+}
 
 #works-card:hover {
 	animation: glow 1s forwards;
