@@ -2,9 +2,13 @@ const flipContainer = document.querySelector('.flip-container');
 const ul = document.querySelector('ul');
 const sideNavs = document.querySelectorAll('.side-nav');
 const linkedIn = document.querySelector('#linkedin-link');
+const email = document.querySelector('#email');
+
+email.addEventListener('mouseover', () => {
+	email.style.visibility = 'visible'
+})
 
 flipContainer.addEventListener('click', () => {
-	console.log('clicked flip');
 	document.querySelector('.flipper').classList.toggle('hover');
 	document.querySelector('.back').classList.toggle('background');
 });

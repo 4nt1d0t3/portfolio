@@ -7,6 +7,13 @@ html {
 	font-family: 'Bangers', cursive;
 	overflow: hidden;
 }
+body {
+	margin: 0;
+}
+
+/* ==================== */
+/* MOBILE */
+/* ==================== */
 #container {
 	display: flex;
 	flex-direction: column;
@@ -15,38 +22,35 @@ html {
 	align-items: center;
 }
 #billboard {
-	width: 60%;
+	display: none;
+}
+.card-body {
+	max-width: 100%;
 }
 .side-i {
 	position: relative;
-	/* top: 60px;
-    left: 25px; */
 	text-align: center;
-	font-size: x-large;
+	font-size: inherit;
 	color: white;
 }
 .side-nav {
-	display: none;
 	font-family: 'Bangers', cursive;
 	letter-spacing: 1px;
+	font-size: inherit;
 }
-.ul-hover {
-	background-color: rgba(4, 7, 10, 0.534);
-	width: 120px;
-	transition: .8s;
-}
-ul {
-	width: 10px;
-	margin-top: 0;
-	height: 100%;
-	align-self: flex-start;
-	position: absolute;
-	top: 0%;
-	left: -20px;
+
+#navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	max-width: 100%;
 	list-style: none;
+	padding-left: 0;
+	font-size: 2vw;
 }
 li {
-	margin-top: 25px;
+	display: inline;
+	padding: 5px;
 }
 a {
 	color: white;
@@ -54,32 +58,97 @@ a {
 }
 
 h1 {
+	position: relative;
 	text-decoration: underline;
 }
 #anti-bug {
 	max-width: 100%;
-	max-height: 60%;
 }
-#works-card {
-	position: absolute;
-	top: 20%;
-	width: 18%;
-	height: auto;
+.card {
+	position: relative;
+	max-width: 100%;
+	background-color: rgba(255, 255, 255, 0.329);
+}
+.card-image,
+.card-text {
 	cursor: pointer;
 }
 p {
 	font-family: 'Open Sans', sans-serif;
 }
-
-#works-card:hover {
-	animation: glow 1s forwards;
+/* ============================ */
+/* TABLET */
+/* ============================ */
+@media (min-width: 520px) {
+	.card {
+		max-width: 520px;
+	}
 }
 
+/* ============================ */
+/* LAPTOP */
+/* ============================ */
+@media (min-width: 750px) {
+	#billboard {
+		display: inline;
+		max-width: 100%;
+	}
+	.card {
+		position: relative;
+		max-width: 100%;
+		bottom: 25vh;
+		background-color: transparent;
+	}
+	.card-image {
+		position: absolute;
+		top: 30%;
+		max-width: 40%;
+		left: 12%;
+	}
+	.card-text {
+		position: absolute;
+		width: 35vw;
+		right: 12.5%;
+		top: 30%;
+		font-size: 1.5vw;
+		text-align: center;
+	}
+	.card-text a {
+		color: black;
+	}
+	.side-nav {
+		opacity: 0;
+	}
+	#navbar {
+		width: 100%;
+		z-index: 2;
+		margin-top: 0;
+		padding-top: 4vh;
+
+	}
+	#navbar:hover {
+		height: 10vh;
+	}
+	.appear {
+		animation: appear 1s forwards;
+	}
+	.glow {
+		animation: glow 1s forwards;
+	}
+}
 @keyframes glow {
 	from {
 		box-shadow: 0 0 rgba(0, 0, 0, 0.2);
 	}
 	to {
 		box-shadow: 0 0 200px 100px rgba(255, 255, 255, 0.712);
+	}
+}
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }

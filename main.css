@@ -10,7 +10,6 @@ html {
 /* ====================================== */
 /* MOBILE VIEW */
 /* ====================================== */
-
 header {
 	max-width: 100%;
 }
@@ -70,7 +69,6 @@ ul {
 	header {
 		width: 100%;
 		left: 0;
-		/* position: absolute; */
 		top: -1000px;
 		-webkit-transition: top 1.5s ease;
 		transition: top 1.5s ease;
@@ -98,26 +96,18 @@ ul {
 		display: block;
 		max-width: 60%;
 	}
-	h2 {
-		text-align: center;
-		padding-left: 5%;
-		max-width: 85%;
-	}
 	.blurb {
 		display: none;
 	}
 	.buttons {
 		display: inline;
-		padding-left: 13%;
+		padding-left: 9%;
 		top: 65%;
 	}
 	#works, #deets {
 		font-size: 2vw;
 		width: 15%;
-	}
-	#deets {
-		width: 15%;
-		margin-left: 3%;
+		margin-left: 4%;
 	}
 	#works:hover i {
 		color: rgb(57, 57, 252);

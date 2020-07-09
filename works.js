@@ -1,20 +1,39 @@
-const worksCard = document.querySelector('#works-card');
-const ul = document.querySelector('ul');
+const cardImage = document.querySelector('.card-image');
+const cardText = document.querySelector('.card-text');
+const navbar = document.querySelector('#navbar');
 const sideNavs = document.querySelectorAll('.side-nav');
 
-worksCard.addEventListener('click', () => {
-	location.href = 'https://sheltered-river-68577.herokuapp.com/';
+
+navbar.addEventListener('mouseover', () => {
+	console.log('hover')
+	sideNavs.forEach((nav) => {
+		nav.classList.add('appear');
+	});
+	navbar.classList.add('ul-hover')
+});
+navbar.addEventListener('mouseout', () => {
+	sideNavs.forEach((nav) => {
+		nav.classList.remove('appear');
+	});
+	navbar.classList.remove('ul-hover')
 });
 
-ul.addEventListener('mouseover', () => {
-	sideNavs.forEach((nav) => {
-		nav.style.display = 'block';
-	});
-	ul.classList.add('ul-hover')
-});
-ul.addEventListener('mouseout', () => {
-	sideNavs.forEach((nav) => {
-		nav.style.display = 'none';
-	});
-	ul.classList.remove('ul-hover')
-});
+cardText.addEventListener('mouseover', () => {
+	cardText.classList.add('glow')
+	cardImage.classList.add('glow')
+})
+cardImage.addEventListener('mouseover', () => {
+	cardText.classList.add('glow')
+	cardImage.classList.add('glow')
+})
+cardText.addEventListener('mouseout', () => {
+	cardText.classList.remove('glow')
+	cardImage.classList.remove('glow')
+})
+cardImage.addEventListener('mouseout', () => {
+	cardText.classList.remove('glow')
+	cardImage.classList.remove('glow')
+})
+
+
+
