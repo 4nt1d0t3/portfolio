@@ -94,8 +94,8 @@ a:visited {
 	#coder {
 		display: inline;
 		max-width: 80%;
-		/* animation-name: rise-up;
-		animation-duration: 3s */
+		animation-name: rise-up;
+		animation-duration: 3s
 	}
 	#bubble {
 		position: absolute;
@@ -177,10 +177,10 @@ a:visited {
 		margin-top: 25px;
 	}
 
-	/* .div-appear {
+	.div-appear {
 		visibility: hidden;
 		animation: appear 2900ms forwards;
-	} */
+	}
 }
 
 @keyframes anchor {
